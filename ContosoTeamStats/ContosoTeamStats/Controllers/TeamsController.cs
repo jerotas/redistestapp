@@ -45,7 +45,7 @@ namespace ContosoTeamStats.Controllers
             var cache = Connection.GetDatabase();
 
             var list = cache.StringGet("teamsList");
-            ViewBag["list"] = list;
+            ViewBag.List = list;
 
             return View();
         }
