@@ -31,7 +31,7 @@ namespace ContosoTeamStats.Controllers
         {
             var cache = Connection.GetDatabase();
 
-            cache.StringSet("teamsList", JsonConvert.SerializeObject("stuff"));
+            cache.StringSet("teamsList", "stuff");
 
             return View();
         }
@@ -40,7 +40,7 @@ namespace ContosoTeamStats.Controllers
             var cache = Connection.GetDatabase();
 
             var list = cache.StringGet("teamsList");
-            ViewBag["list"] = JsonConvert.DeserializeObject<string>(list);
+            ViewBag["list"] = list;
 
             return View();
         }
