@@ -27,6 +27,11 @@ namespace ContosoTeamStats.Controllers
 
         #region Actions
 
+        public ActionResult Test()
+        {
+            return View();
+        }
+
         public ActionResult TestSet()
         {
             var cache = Connection.GetDatabase();

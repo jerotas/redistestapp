@@ -283,6 +283,7 @@
     <Content Include="Views\Teams\Index.cshtml" />
     <Content Include="Views\Teams\TestSet.cshtml" />
     <Content Include="Views\Teams\TestGet.cshtml" />
+    <Content Include="Views\Teams\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
