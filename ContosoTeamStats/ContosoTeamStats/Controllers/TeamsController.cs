@@ -27,11 +27,20 @@ namespace ContosoTeamStats.Controllers
 
         #region Actions
 
-        public ActionResult Test()
+        public ActionResult TestSet()
         {
             var cache = Connection.GetDatabase();
 
             cache.StringSet("teamsList", JsonConvert.SerializeObject("stuff"));
+
+            return View();
+        }
+
+        public ActionResult TestGet() {
+            var cache = Connection.GetDatabase();
+
+            var list = cache.StringGet("teamsList");
+            ViewBag["list"] = JsonConvert.DeserializeObject<string>(list);
 
             return View();
         }
